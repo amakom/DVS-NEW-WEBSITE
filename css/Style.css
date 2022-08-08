@@ -1,0 +1,886 @@
+/*----------------------------------------------------------
+   ***************** Table of Content ********************
+
+01. =google fonts
+02. =variables
+03. =overrides variables for - theme dark
+04. =base
+0.5 =box
+06. =custonized bootstrap classses
+07. =animation keyframes
+08. =section padding , title
+09. =buttons
+10. =header
+11. =banner section
+12. =vision
+13. =testimonials
+14. =pagination
+15. =breadcrumbs
+16. =tabs
+17. =bubble animation
+18. =style switcher
+19. =header
+20. =footer
+21. =banner section
+22. =fun facts section
+23. =courses section
+24. =testimonials section
+25. =bai section
+26. =course details section
+27. =contact section
+------------------------------------------------------------*/
+
+/* ------------------------
+ 01. =google fonts
+--------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/*-------------------------
+ 02. =variables
+---------------------------*/
+
+:root {
+  --main-color: #d69317;
+  --main-color-2: #2dd2fa;
+  --color-1: #e91e63;
+  --color-2: #f5ae10;
+  --color-3: #09d69c;
+  --bg-dark: #171b26;
+  --main-to-dark-color: var(--main-color);
+  --dark-to-main-color: var(--bg-dark);
+  --overlay: rgba(0, 0, 0, 0.5);
+  --shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  --black-900: #000000;
+  --black-400: #555555;
+  --lighg-grey: #dcdcdc;
+  --black-100: #f7f7f7;
+  --white: #ffffff;
+  --black-alpha-100: rgba(0, 0, 0, 0.05);
+  --border-color-2: hsl(240, 9%, 25%);
+  --border-color-1: hsl(240, 9%, 30%);
+}
+
+/*------------------------------------------
+ 03. =overrides variables for - theme dark
+---------------------------------------------*/
+
+/*----------------------------
+ 04. =base
+-------------------------------*/
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black-70);
+  min-height: 100vh;
+  line-height: 1.5;
+  /*overflow: hidden;*/
+}
+
+body.hidden-scrolling{
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-content-center {
+  align-content: center;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--main-color);
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.3;
+}
+h3 {
+  font-size: 20px;
+}
+::selection {
+  color: var(--WHITE);
+  background-color: var(--main-color);
+}
+
+/*-------------------------------
+ 0.5 =box
+---------------------------------*/
+.box {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  padding: 30px;
+}
+
+/*-------------------------------
+ 06. =custonized bootstrap classses
+---------------------------------*/
+
+/*-------------------------------
+ 07. =animation keyframes
+---------------------------------*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*-------------------------------
+ 08. =section padding , title
+---------------------------------*/
+.section-padding {
+  padding: 80px 0;
+}
+.section-title {
+  margin-bottom: 60px;
+}
+.section-title h2 {
+  font-size: 40px;
+  color: var(--black-900);
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0;
+}
+.section-title h2 span {
+  color: var(--main-color);
+}
+.section-title-1 h2 {
+  font-size: 40px;
+  color: var(--white);
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0;
+}
+
+/*-------------------------------
+ 09. =buttons
+---------------------------------*/
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn-0 {
+  background-color: var(--main-color);
+  color: var(--white);
+  margin: 2px;
+  align-items: center;
+  justify-items: center;
+}
+.btn-0:hover {
+  background-color: transparent;
+  border-color: var(--main-color);
+  color: var(--white);
+}
+.btn-1 {
+  background-color: var(--color-2);
+  color: var(--white);
+  margin: 2px;
+}
+.btn-1:hover {
+  background-color: transparent;
+  border-color: var(--main-color);
+  color: var(--white);
+}
+
+.btn-2 {
+  background-color: var(--main-color);
+  padding: 12px 30px;
+  border: none;
+  color: var(--white);
+  border-radius: 30px;
+  font-size: 16px;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+  box-shadow: var(--shadow-black-300);
+  font-weight: 500;
+}
+.btn-2:focus {
+  box-shadow: var(--shadow-black-300);
+}
+.btn-2:hover {
+  color: var(--main-color);
+  background-color: var(--white);
+}
+
+/*-------------------------------
+ 10. =header
+---------------------------------*/
+.header {
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 15px;
+  /*border-bottom: 1px solid var(--border-color-2);*/
+  /*border-bottom: 1px solid var(--white-800);*/
+}
+
+.header-main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.header .logo {
+  max-width: 150px;
+  padding: 0 15px;
+}
+.header .nav-menu{
+  padding: 0 15px;
+}
+.header .menu > .menu-item{
+  display: inline-block;
+  margin-left: 30px;
+  position: relative;
+}
+
+.header .menu > .menu-item > a{
+  display: block;
+  padding: 12px 0;
+  font-size: 16px;
+  color: var(--white);
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.header .menu > .menu-item > a .plus{
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  position: relative;
+  margin-left: 5px;
+  pointer-events: none;
+}
+
+.header .menu > .menu-item > a .plus:before,
+.header .menu > .menu-item > a .plus:after{
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  background-color: var(--white);
+  height: 2px;
+  width: 100%;
+  transform: translate(-50%,-50%);
+  transition: all 0.3s ease;
+}
+.header .menu > .menu-item:hover > a .plus:before,
+.header .menu > .menu-item:hover > a .plus:after{
+  background-color: var(--main-color);
+}
+.header .menu > .menu-item > a .plus:after{
+  transform: translate(-50%,-50%) rotate(-90deg);
+}
+
+.header .menu > .menu-item > .sub-menu > .menu-item > a:hover,
+.header .menu > .menu-item:hover > a{
+  color: var(--main-color);
+}
+
+.header .menu > .menu-item > .sub-menu{
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  width: 220px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding: 10px 0;
+  border-top: 3px solid var(--main-color);
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+@media(min-width: 992px){
+.header .menu > .menu-item-has-children:hover > .sub-menu{
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  }
+  .header .menu > .menu-item-has-children:hover > a .plus:after{
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+}
+
+.header .menu > .menu-item > .sub-menu > .menu-item{
+  display: block;
+}
+.header .menu > .menu-item > .sub-menu > .menu-item > a{
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black-900);
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.header .open-nav-menu{
+  height: 34px;
+  width: 40px;
+  margin-right: 15px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header .open-nav-menu span{
+  display: block;
+  height: 3px;
+  width: 24px;
+  background-color: var(--white);
+  position: relative;
+}
+
+.header .open-nav-menu span:before,
+.header .open-nav-menu span:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  box-sizing: border-box;
+}
+
+.header .open-nav-menu span:before{
+  top: -7px;
+}
+.header .open-nav-menu span:after{
+  top: 7px;
+}
+.header .close-nav-menu{
+  height: 40px;
+  width: 40px;
+  background-color: var(--black-900);
+  margin: 0 0 15px 15px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.header .close-nav-menu i{
+  width: 16px;
+  color: var(--white);
+}
+
+.header .menu-overlay{
+  position: fixed;
+  z-index: 999;
+  background-color: var(--overlay);
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.header .menu-overlay.active{
+  visibility: visible;
+  opacity: 1;
+}
+
+/*-------------------------------
+ 11. =banner section
+---------------------------------*/
+.banner-section {
+  background-image: url(../images/Star.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 150px 0;
+}
+.banner-text h2 {
+  font-size: 20px;
+  color: var(--main-color);
+}
+.banner-text h1 {
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/*-------------------------------
+ 12. =vision
+---------------------------------*/
+.vision-section {
+  background-color: var(--lighg-grey);
+  padding-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.vision-text p {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--dark-700);
+  margin: 15px 0 40px;
+}
+
+/*-------------------------------
+ 13. =testimonials
+---------------------------------*/
+.testimonials-section {
+  background-color: var(--bg-dark);
+}
+.testimonials-section .img-box {
+  height: 150px;
+  width: 150px;
+  /*background-color: var(--red-light);*/
+  margin: 30px auto 50px;
+}
+.testimonials-section .img-box::before,
+.testimonials-section .img-box::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--main-color);
+  animation: spin 15s linear infinite;
+}
+.testimonials-section .img-box::before {
+  height: 180px;
+  width: 180px;
+  left: -15px;
+  top: -15px;
+  border-left: 1px solid transparent;
+}
+.testimonials-section .img-box::after {
+  height: 210px;
+  width: 210px;
+  left: -30px;
+  top: -30px;
+  border-right: 1px solid transparent;
+}
+.testimonials-item h2 {
+  text-transform: capitalize;
+  color: var(--color-1);
+}
+.testimonials-item p{
+  color: var(--white);
+}
+.testimonials-item .text-2 {
+  margin: 0;
+  text-transform: capitalize;
+}
+.testimonials-section .carousel-control-prev,
+.testimonials-section .carousel-control-next {
+  position: relative;
+  height: 35px;
+  width: 35px;
+  background-color: var(--main-color);
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+.testimonials-section .decoration-circles-item {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.testimonials-section .decoration-circles-item:nth-child(1) {
+  left: 10%;
+  top: 20%;
+  height: 30px;
+  width: 30px;
+  background-color: var(--color-2);
+}
+.testimonials-section .decoration-circles-item:nth-child(2) {
+  left: 40%;
+  top: 40%;
+  height: 50px;
+  width: 50px;
+  background-color: var(--color-3);
+}
+.testimonials-section .decoration-circles-item:nth-child(3) {
+  left: 70%;
+  top: 70%;
+  height: 30px;
+  width: 30px;
+  background-color: var(--color-1);
+}
+.testimonials-section .decoration-circles-item:nth-child(4) {
+  left: 20%;
+  top: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: var(--color-1);
+}
+.testimonials-section .decoration-imgs-item {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.testimonials-section .decoration-imgs-item:nth-child(1) {
+  height: 60px;
+  width: 60px;
+  left: 20%;
+  top: 30%;
+  background-color: var(--color-2);
+}
+.testimonials-section .decoration-imgs-item:nth-child(2) {
+  height: 80px;
+  width: 80px;
+  left: 90%;
+  top: 40%;
+  background-color: var(--color-1);
+}
+.testimonials-section .decoration-imgs-item:nth-child(3) {
+  height: 40px;
+  width: 40px;
+  left: 10%;
+  top: 60%;
+  background-color: var(--color-3);
+}
+
+
+/*-------------------------------
+ 14. =foundation
+---------------------------------*/
+.foundation-section {
+  padding-bottom: 50px;
+  background-color: var(--black-900);
+}
+.foundation-section .h-100 {
+  padding: 120px 0;
+}
+.foundation-text,
+.foundation-img {
+  width: 50%;
+  padding: 0 15px;
+}
+.foundation-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+.foundation-text h3 {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--white);
+  margin: 15px 0 40px;
+}
+.foundation-img-inner {
+  max-width: 1000px;
+  margin: auto;
+}
+.foundation-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+.foundation-img img {
+  max-width: 400px;
+  width: 100%;
+}
+
+/*-------------------------------
+ 15. =sponsor
+---------------------------------*/
+.sponsor-section {
+  background-color: var(--lighg-grey);
+  padding-bottom: 50px;
+}
+.sponsor-section img {
+  margin: 0 15px 30px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+/*-------------------------------
+ 16. =footer
+---------------------------------*/
+.footer {
+  background-color: var(--bg-dark);
+  padding: 60px 0;
+  color: var(--black-100);
+}
+.footer-item {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-item h2 {
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0 0 30px;
+}
+.footer-item p {
+  font-size: 16px;
+  color: var(--dark-700);
+}
+.footer-about .social-links {
+  margin-top: 20px;
+}
+.footer-about .social-links a {
+  display: inline-block;
+  border: 1px solid transparent;
+  height: 35px;
+  width: 35px;
+  color: var(--twitter);
+  line-height: 35px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+.footer-about .social-links a:hover {
+  border-color: var(--twitter);
+}
+.footer-quick-links ul li a {
+  display: block;
+  padding: 8px 0;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: inherit;
+}
+.footer-contact p {
+  margin: 0 0 15px;
+  position: relative;
+  padding-left: 30px;
+}
+.footer-contact p i {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.footer-newsletter .form-control {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.footer-newsletter .btn {
+  height: 45px;
+  width: 100%;
+}
+.copy {
+  font-size: 18px;
+  text-align: center;
+  color: var(--dark-700) !important;
+}
+
+
+
+/*-------------------------------
+ 17. =validator-school
+---------------------------------*/
+.validator-school-section {
+  background-image: linear-gradient(to left top, #000000, #0e0908, #17120e, #1a1912, #1b2018, #1a221b, #1a251f, #192723, #192522, #182420, #18221f, #17211e);
+  min-height: 380px;
+  padding: 80px 0;
+}
+.validator-text h1 {
+  font-size: 75px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+/*-------------------------------
+ 18. =fun facts section
+---------------------------------*/
+.fun-facts-section{
+  padding-top: 80px 0;
+}
+.fun-facts-item {
+  padding: 15px 0;
+}
+.fun-facts-item h2 {
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.fun-facts-item p {
+  margin: 0;
+  text-transform: uppercase;
+}
+.fun-facts-item .style-1 {
+  color: var(--black-70);
+}
+.fun-facts-item .style-2 {
+  color: var(--color-1);
+}
+.fun-facts-item .style-3 {
+  color: var(--color-2);
+}
+.fun-facts-item .style-4 {
+  color: var(--color-3);
+}
+
+
+/*-------------------------------
+ 19. =tabs
+---------------------------------*/
+.nav-tabs .nav-link{
+  background-color: var(--white);
+  text-transform: capitalize;
+  border-color: var(--border-color-2);
+  padding: 5px 12px;
+  margin: 0 5px 10px;
+  border-radius: 5px;
+  color: var(--bg-dark);
+  font-size: 16px;
+}
+.nav-tabs .nav-link:hover{
+  border-color: var(--border-color-2);
+}
+.nav-tabs .nav-link.active{
+  background-color: var(--main-color);
+  border-color: transparent;
+  color: var(--white);
+}
+
+
+
+/*-------------------------------
+ 20. =courses section
+---------------------------------*/
+.courses-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+.courses-item .img-box img {
+  width: 100%;
+  border-radius: 5px;
+}
+.courses-item .link{
+  color: var(--bg-dark);
+  display: inline-block;
+}
+.courses-item .title {
+  text-transform: capitalize;
+  margin: 15px 0;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+.courses-item:hover .title {
+  color: var(--main-color);
+}
+.courses-item .instructor{
+  text-transform: capitalize;
+  margin: 0 0 12px;
+}
+.courses-item .instructor img{
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.courses-item .rating{
+  font-size: 14px;
+}
+.courses-item .average-rating{
+  font-weight: 600;
+  color: var(--color-2);
+}
+.courses-item .average-stars i{
+  color: var(--color-2);
+}
+.courses-item .price{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: var(--main-color);
+  color: var(--white);
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+
+/*-------------------------------
+ 21. =banner section
+---------------------------------*/
+
+/*-------------------------------
+ 22. =fun facts section
+---------------------------------*/
+
+/*-------------------------------
+ 23. =
+---------------------------------*/
+
+
+/*-------------------------------
+ 24. =testimonials section
+---------------------------------*/
+
+/*-------------------------------
+ 25. =bai section
+---------------------------------*/
+.bai-section .circular-img-circle {
+  background-color: var(--yellow-light);
+}
+/*-------------------------------
+ 26. =course details section
+---------------------------------*/
+
+/*-------------------------------
+ 27. =contact section
+---------------------------------*/
+.contact-item {
+  position: relative;
+  padding-left: 55px;
+  margin-bottom: 40px;
+}
+.contact-item .icon-box {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  color: var(--WHITE);
+}
