@@ -45,7 +45,7 @@
   --color-1: #e91e63;
   --color-2: #f5ae10;
   --color-3: #09d69c;
-  --bg-dark: #171b26;
+  --bg-dark: #1D1D22;
   --main-to-dark-color: var(--main-color);
   --dark-to-main-color: var(--bg-dark);
   --overlay: rgba(0, 0, 0, 0.5);
@@ -837,8 +837,61 @@ h3 {
 
 
 /*-------------------------------
- 21. =banner section
+ 21. =accordian section
 ---------------------------------*/
+.accordian{
+  display: block;
+  margin: 100px auto;
+}
+
+.accordian .card{
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+}
+.accordian .card .card-header{
+  background-color: var(--main-color);
+  margin: 0;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.accordian .card .card-header h3{
+  color: var(--white);
+  position: relative;
+}
+.accordian .card .card-header {
+  position: relative;
+}
+.accordian .card .card-header span{
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  height: 25px;
+  width: 25px;
+  color: var(--main-color);
+  background-color: var(--white);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  font-size: 16px;
+}
+.accordian .card .card-body{
+  padding: 20px;
+}
+.accordian .card .card-body {
+  display: none;
+}
+/*open one card by default*/
+.accordian .card:nth-child(1) .card-body{
+  display: block;
+}
+.accordian .card .card-body p{
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  color: var(--black-400);
+}
 
 /*-------------------------------
  22. =fun facts section
