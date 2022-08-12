@@ -184,6 +184,12 @@ h3 {
   margin: 0;
 }
 
+.section-title .sub-title {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--black-900);
+}
+
 /*-------------------------------
  09. =buttons
 ---------------------------------*/
@@ -224,22 +230,30 @@ h3 {
 
 .btn-2 {
   background-color: var(--main-color);
-  padding: 12px 30px;
-  border: none;
+  padding: 10px 30px;
   color: var(--white);
-  border-radius: 30px;
+  border-radius: 4px;
   font-size: 16px;
   text-transform: capitalize;
   transition: all 0.5s ease;
   box-shadow: var(--shadow-black-300);
   font-weight: 500;
+  cursor: pointer;
 }
 .btn-2:focus {
   box-shadow: var(--shadow-black-300);
 }
 .btn-2:hover {
-  color: var(--main-color);
-  background-color: var(--white);
+  color: var(--black-70);
+  background-color: transparent;
+  border-color: var(--main-color);
+}
+
+.btn-block {
+  width: 100%;
+}
+.btn-form {
+  height: 48px;
 }
 
 /*-------------------------------
@@ -600,6 +614,7 @@ h3 {
   font-weight: 700;
   color: var(--white);
   line-height: 1.2;
+  text-transform: capitalize;
 }
 .foundation-text h3 {
   font-size: 20px;
@@ -728,8 +743,8 @@ h3 {
 /*-------------------------------
  18. =fun facts section
 ---------------------------------*/
-.fun-facts-section{
-  padding-top: 80px 0;
+.fun-facts-section .py-2{
+  margin-top: 20px;
 }
 .fun-facts-item {
   padding: 15px 0;
@@ -913,8 +928,36 @@ h3 {
   background-color: var(--yellow-light);
 }
 /*-------------------------------
- 26. =course details section
+ 12. =forms
 ---------------------------------*/
+.form-title {
+  font-size: 24px;
+  margin: 0 0 30px;
+  font-weight: 600;
+}
+.form-control::placeholder {
+  color: var(--black-70);
+}
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+.form-control {
+  height: 48px;
+  border-color: var(--border-color-1);
+  color: var(--black-90);
+  background-color: transparent;
+}
+.form-control:focus {
+  background-color: transparent;
+  border-color: var(--border-color-1);
+  color: var(--black-90);
+  box-shadow: none;
+}
+textarea.form-control {
+  height: 120px;
+  resize: none;
+}
 
 /*-------------------------------
  27. =contact section
@@ -935,5 +978,5 @@ h3 {
   border-radius: 50%;
   left: 0;
   top: 0;
-  color: var(--WHITE);
+  color: var(--white);
 }
