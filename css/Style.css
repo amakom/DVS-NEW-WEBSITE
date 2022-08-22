@@ -909,8 +909,29 @@ h3 {
 }
 
 /*-------------------------------
- 22. =fun facts section
+ 22. =validators details
 ---------------------------------*/
+.validators-section {
+  background-color: var(--dark-900);
+  padding-bottom: 50px;
+}
+.validators-text p{
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--black-900);
+  margin: 15px 0 40px;
+}
+
+.validators-text .title{
+  color: var(--black-900);
+  text-transform: capitalize;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+.validators-text .title:hover{
+  color: var(--main-color);
+}
 
 /*-------------------------------
  23. =
